@@ -1,9 +1,118 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    <body>
-        <h1>HEY YOU WHERE SUCESSFUL</h1>
-    </body>
+    <!-- chartjs cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+      .bd-callout {
+        padding: 0.25rem 1rem;
+        border: 1px solid #e9ecef;
+        border-left-width: 0.5rem;
+        border-radius: 0.25rem;
+        background-color: white;
+        border-left-color: rgb(5, 201, 152);
+      }
+
+      .card-below{
+        margin-bottom: .5rem !important;
+      }
+
+    </style>
+    
+    <title>Sucess</title>
+  </head>
+  <body style="background-color: rgb(230, 227, 227);">
+    
+
+    <div class="container">
+      
+      <div class="info mb-5">
+        <label class="mb-3"><strong>Company Metrics</strong></label>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p style="color:rgb(5, 201, 152)"><strong>$406,411.29</strong></p>
+              <p class="card-below">Total Revenue</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p><strong>$620</strong></p>
+              <p class="card-below">Total Jobs Avg</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p><strong>665</strong></p>
+              <p class="card-below">Tickets Created</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p><strong>735</strong></p>
+              <p class="card-below">Tickets Scheduled</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p style="color:red"><strong>$110,448.8</strong></p>
+              <p class="card-below">Outstanding Amount</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p><strong>105</strong></p>
+              <p class="card-below">Memberships Sold</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p><strong>436</strong></p>
+              <p class="card-below">Jobs Completed</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="bd-callout bd-callout-info">
+              <p><strong>65</strong></p>
+              <p class="card-below">Total Canceled</p>
+            </div>
+          </div>   
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label class="mb-3"><strong>Revenue By Job Location</strong></label>
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <canvas id="job_location"></canvas>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+          <label class="mb-3"><strong>Revenue By Job Type</strong></label>
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <canvas id="job_type"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/charts.js"></script>
+  </body>
 </html>

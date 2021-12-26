@@ -1,32 +1,43 @@
-function checkform(){
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
 
-    document.getElementById('username_warning').classList.add('error-txt');
-    document.getElementById('password_warning').classList.add('error-txt');
-
-    let formfilledsucess = true;
+function valid_complete_form(){
     
-    if(email && password){
-        
+
+    var email = document.getElementById('email').value;
+    var pass = document.getElementById('password').value;
+
+    document.getElementById('username_warning').classList.add('d-none');
+    document.getElementById('pass_warning').classList.add('d-none');
+
+    let final_result = true;
+
+
+
+    if(email && pass){
         //email validation
         if(!email.match(/\S+@\S+\.\S+/)){
-            document.getElementById('username_warning').classList.remove('error-txt');
-            formfilledsucess = false;
-        }
-        if(final_result && password.match("SmartServTest@123")){
-            window.location.href = "dashboard.html";
-            return false;
-        }
-        if(!password.match(/^[A-Z0-9@]/)){
-            document.getElementById('password_warning').classList.remove('error-txt');
+            document.getElementById('username_warning').classList.remove('d-none');
             final_result = false;
         }
 
+
+        
+        if(final_result && pass.match("SmartServTest@123")){
+            window.location.href = "dashboard.html";
+            return false;
+        }
+
+        if(!pass.match(/^[A-Z0-9@]/)){
+            document.getElementById('pass_warning').classList.remove('d-none');
+            final_result = false;
+        }
+        
+            
+        
+
     }else{
-        alert("please enter email and password");
-        formfilledsucess = false;
+        alert("please enter email and password")
+        final_result = false;
     }
 
-    return formfilledsucess;
+    return final_result;
 }
