@@ -12,9 +12,27 @@
         <div class="main">
             
             <img src="smartservlogo.png" width="408" height="174">
-            <form>
-                <input type="submit" value="Login">
+
+            <form action = "#">
+                <div class="field email">
+                    <div class="input-area">
+                      <input type="text" placeholder="Email Address">
+                    </div>
+                    <div class="error error-txt">Email can't be blank</div>
+                </div>
+
+                <div class="field password">
+                    <div class="input-area">
+                      <input type="password" placeholder="Password">
+                    </div>
+                    <div class="error error-txt">Password can't be blank</div>
+                  </div>
+                
+                
+                <input type="submit" value="Login" id="submit">
+                
             </form>
+            
             <div class="forgot" >
                 <a href="#">Forgot your password?</a>
             </div>
